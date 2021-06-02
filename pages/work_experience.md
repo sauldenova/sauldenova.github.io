@@ -10,16 +10,16 @@ permalink: /work_experience
 * Software Engineer II (September 2018 - September 2020)
 * Software Engineer (March 2018 - September 2018)
 
-As described [here](https://docs.microsoft.com/en-us/azure/devops/learn/git/git-at-scale), making a Continuous Integration system for the whole Windows codebase has it's own set of challenges because:
+As described [here](https://docs.microsoft.com/en-us/azure/devops/learn/git/git-at-scale), making a Continuous Integration system for the whole Windows codebase is challenging because:
 
 * There's about 4,000 developers in the Windows codebase.
 * The repository has 150K to 250K branches.
-* Few minutes for an incremental build and test. 12h for a full build + validation.
+* We need few minutes to several hours for an incremental build and test. 12h for a full build + validation.
 
 A few highlights of my work on this team:
 
-1. Worked on the v-team to implement a **new build engine** for our CI system. Instead of using an incremental approach, this new build engine builds most of the repository and caches the outputs to make sure that we build every dependency. My key contributions to this project were:
-    1. Lead a sub team of 3 developers to improve the **overall performance of the system**. First, I identified all of the parts of the system that could be subject to optimization. Then, I mentored 2 junior engineers to work on the performance improvements, while working on some myself. In the end, we have been able to **reduce 25% of P80 overhead time (30 mins)**. With total improvements underway would reduce overhead by 50%.
+1. Worked on the virtual team to implement a **new build engine** for our CI system. Instead of using an incremental approach, this new build engine builds most of the repository and caches the outputs to make sure that we build every dependency. My key contributions to this project were:
+    1. Lead a sub team of 3 developers to improve the **overhead of the build engine**. First, I identified all of the parts of the system that could be subject to optimization. Then, I mentored 2 junior engineers to work on the performance improvements, while also working on some myself. In the end, we have been able to **reduce 25% of P80 overhead time (30 mins)**. With total improvements underway would reduce overhead by 50%.
     2. Worked on the **rollout for PR builds**, implemented the pipelines, gave the first training to new customers, and established tooling so that onboarding could be made automatic.
     3. Reduced our nightly build capacity for regular builds to only the branches that needed the builds which allowed us to **free around 60% of our nightly build machines**. This made it so we could **ship our new engine to all customers** for nightly builds.
 2. Collaborated with another developer to **rewrite the biggest component of our system**. This rewrite allowed us to be able to expand the system with ease. Eventually, this allowed us to onboard **2 more build engines** into our platform.
